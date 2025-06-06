@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         )
 
         button.setOnClickListener {
+            if (campos[4].text.toString().toInt() <= 0){
+                campos[4].error = "Número precisa ser maior que 0"
+                return@setOnClickListener
+            }
             for (campo in campos){
                 if (campo.text.isEmpty()){
                     campo.error = "Preencha um valor"
