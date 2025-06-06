@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginBottom="16dp"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:layout_marginTop="20dp"
+        android:background="#E1D7FF"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <EditText
         android:id="@+id/nomeLocal"
@@ -23,8 +24,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="Nome do local"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_corners"
+    android:textColorHint="#757575"
+    android:textColor="#212121" />
 
     <EditText
         android:id="@+id/tipoEvento"
@@ -32,8 +39,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="Tipo do evento extremo"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:textColorHint="#757575"
+        android:textColor="#212121" />
 
     <EditText
         android:id="@+id/grauImpacto"
@@ -41,8 +54,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="Grau: leve, moderado ou severo"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:textColorHint="#757575"
+        android:textColor="#212121" />
 
     <EditText
         android:id="@+id/dataEvento"
@@ -50,8 +69,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="Data do evento"
-        android:inputType="date"/>
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:textColorHint="#757575"
+        android:textColor="#212121" />
 
     <EditText
         android:id="@+id/noPessoasAfetadas"
@@ -59,8 +84,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="Numero estimado de pessoas afetadas"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:textColorHint="#757575"
+        android:textColor="#212121" />
 
     <Button
         android:id="@+id/button"
@@ -68,7 +99,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="inserir" />
+        android:layout_marginTop="16dp"
+        android:text="INSERIR"
+        android:backgroundTint="#03DAC5"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -76,5 +111,6 @@
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 </LinearLayout>

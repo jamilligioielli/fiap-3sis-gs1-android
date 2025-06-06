@@ -21,12 +21,12 @@ A página inicial da aplicação apresenta um formulário de cadastramento de ev
 - Data do evento 
 - Número estimado de pessoas afetadas
 
-![inicial](./imgs/inicial.png)
+![inicial](./imgs/ecorisco-telainicial.png)
 
 
 Esses dados são exibidos em uma lista, na qual é possível excluir eventos.
 
-![atualizado](./imgs/tela-cotacao-atualizada.png)
+![atualizado](./imgs/ecorisco-lista.png)
 
 ## Estrutura
 

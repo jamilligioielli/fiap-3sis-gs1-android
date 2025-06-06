@@ -2,19 +2,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp"
     android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/textViewItem"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_weight="1"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:text="Novo Item" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textNomeLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            tools:text="Local: Novo Local" />
+
+        <TextView
+            android:id="@+id/textTipoEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            tools:text="Evento: Tipo de Evento" />
+
+        <TextView
+            android:id="@+id/textGrauImpacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            tools:text="Grau: Moderado" />
+
+        <TextView
+            android:id="@+id/textDataEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            tools:text="Data: 01/01/2023" />
+
+        <TextView
+            android:id="@+id/textPessoasAfetadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            tools:text="Pessoas Afetadas: 100" />
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -22,6 +66,6 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:src="@drawable/baseline_delete_24"
-        android:layout_marginEnd="16dp"/>
-
-</LinearLayout>
+        app:tint="#D32F2F"
+        android:contentDescription="Botão de Excluir" />
+  </LinearLayout>

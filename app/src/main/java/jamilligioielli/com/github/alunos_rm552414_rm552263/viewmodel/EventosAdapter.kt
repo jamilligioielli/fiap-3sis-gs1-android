@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import jamilligioielli.com.github.alunos_rm552414_rm552263.model.Evento
 import jamilligioielli.com.github.alunos_rm552414_rm552263.R
+import jamilligioielli.com.github.alunos_rm552414_rm552263.model.Evento
 
 class EventosAdapter(private val onItemRemoved: (Evento) -> Unit) :
     RecyclerView.Adapter<EventosAdapter.EventoViewHolder>() {
@@ -15,11 +15,19 @@ class EventosAdapter(private val onItemRemoved: (Evento) -> Unit) :
     private var eventos = mutableListOf<Evento>()
     inner class EventoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val textView = view.findViewById<TextView>(R.id.textViewItem)
+        val nomeLocal = view.findViewById<TextView>(R.id.textNomeLocal)
+        val tipoEvento = view.findViewById<TextView>(R.id.textTipoEvento)
+        val grauImpacto = view.findViewById<TextView>(R.id.textGrauImpacto)
+        val dataEvento = view.findViewById<TextView>(R.id.textDataEvento)
+        val noPessoasAfetadas = view.findViewById<TextView>(R.id.textPessoasAfetadas)
         val button = view.findViewById<ImageButton>(R.id.imageButton)
 
         fun bind(evento: Evento) {
-            textView.text = evento.nomeLocal
+            nomeLocal.text = evento.nomeLocal
+            tipoEvento.text = evento.tipoEvento
+            grauImpacto.text = evento.grauImpacto
+            dataEvento.text = evento.dataEvento
+            noPessoasAfetadas.text = evento.noPessoasAfetadas.toString()
             button.setOnClickListener {
                 onItemRemoved(evento)
             }

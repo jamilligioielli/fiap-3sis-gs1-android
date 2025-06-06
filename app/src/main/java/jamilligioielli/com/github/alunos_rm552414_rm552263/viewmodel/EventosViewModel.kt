@@ -3,10 +3,8 @@ package jamilligioielli.com.github.alunos_rm552414_rm552263.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import jamilligioielli.com.github.alunos_rm552414_rm552263.model.Evento
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+
 class EventosViewModel(application: Application) : AndroidViewModel(application) {
 
     val eventosLista: MutableList<Evento>;
