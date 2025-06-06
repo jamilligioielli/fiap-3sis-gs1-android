@@ -1,13 +1,13 @@
 package jamilligioielli.com.github.alunos_rm552414_rm552263
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import jamilligioielli.com.github.alunos_rm552414_rm552263.R.id.nomeLocal
 import jamilligioielli.com.github.alunos_rm552414_rm552263.model.Evento
 import jamilligioielli.com.github.alunos_rm552414_rm552263.viewmodel.EventosViewModel
 import jamilligioielli.com.github.listadecompras.viewmodel.EventosAdapter
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         // Define o título da barra de ação.
-        supportActionBar?.title = "Lista de Compras"
+        supportActionBar?.title = "EcoRisco"
 
         // Encontra o RecyclerView pelo seu ID.
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
@@ -47,25 +47,25 @@ class MainActivity : AppCompatActivity() {
 
         // Encontra o botão e o campo de texto pelo seus IDs.
         val button = findViewById<Button>(R.id.button)
-        val editText = findViewById<EditText>(R.id.editText)
+        val nomeLocal = findViewById<EditText>(nomeLocal)
 
         // Define o que acontece quando o botão é clicado.
         button.setOnClickListener {
             // Se o campo de texto estiver vazio, exibe um erro e retorna.
-            if (editText.text.isEmpty()) {
-                editText.error = "Preencha um valor"
+            if (nomeLocal.text.isEmpty()) {
+                nomeLocal.error = "Preencha um valor"
                 return@setOnClickListener
             }
 
             // Adiciona o item ao ViewModel e limpa o campo de texto.
             viewModel.addItem(Evento(
-                nomeLocal = editText.text.toString(),
+                nomeLocal = nomeLocal.text.toString(),
                 tipoEvento = "",
                 grauImpacto = "",
                 dataEvento = Date(2025),
                 noPessoasAfetadas = 0,
             ))
-            editText.text.clear()
+            nomeLocal.text.clear()
         }
 
         // Obtém uma instância do ViewModel.

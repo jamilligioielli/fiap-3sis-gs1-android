@@ -2,7 +2,7 @@
 
 1. [Alunos](#alunos)
 2. [Sobre](#sobre)
-3.[Estrutura](#estrutura)
+3. [Estrutura](#estrutura)
 
 ## Alunos
 
@@ -24,7 +24,7 @@ A página inicial da aplicação apresenta um formulário de cadastramento de ev
 ![inicial](./imgs/inicial.png)
 
 
-Esses dados são exibidos em uma lista, na qual é possível excluir e incluir eventos.
+Esses dados são exibidos em uma lista, na qual é possível excluir eventos.
 
 ![atualizado](./imgs/tela-cotacao-atualizada.png)
 
