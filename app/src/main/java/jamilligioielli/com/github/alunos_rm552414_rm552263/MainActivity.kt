@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(EventosViewModel::class.java)
 
         // Observa as mudanças na lista de itens e atualiza o adaptador quando a lista muda.
-        viewModel.eventosLiveData.observe(this){
+        viewModel.eventosListaLiveData.observe(this){
             eventos -> itemsAdapter.updateEventos(eventos);
         }
 
